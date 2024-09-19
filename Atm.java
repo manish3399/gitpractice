@@ -1,48 +1,3 @@
-//Find the Maximum Element in an Array , take input from user: 
-//please enter data in array, do you want to add more Y or N to exit.
-
-import java.util.Scanner;
-
-class Test {
-        void MaximumElement(){
-            
-        }
-
-        static int [] getInputArray(){
-            Scanner sc = new Scanner(System.in);
-            System.out.println("Enter the size of Array");
-            int n = sc.nextInt();
-            int arr[] = new int[n];
-            System.out.println("Enter the elements of Array");
-            for(int i=0;i<n;i++){
-            // System.out.println("do you want to add more Y or N to exit.");
-            // char o = sc.next().charAt(1);
-            arr[i] = sc.nextInt();
-            }
-            return arr;
-        }
-        static int findMax(int arr[]){
-            int max = arr[0];
-            for(int i=1;i<arr.length;i++){
-                if(arr[i]>max){
-                    max = arr[i];
-                }
-            }
-            return max;
-        }
-
-//Q2: Write a program to find Prime number of given number ask user to enter number and ask do you want to check more prime number Y or N to exit. 
-static boolean isPrime(int a){
-    if(a<=1){
-        return false;
-        }
-        for(int i=2;i<=Math.sqrt(a);i++){
-            if(a%i==0){
-                return false;
-            }
-        }
-        return true;
-}
 
 // Q3: write a code for ATM : 
 
@@ -60,6 +15,10 @@ static boolean isPrime(int a){
 //     if user enters 2-  display the current balance
 //     if user enters 3- ask amount to enter and add it to total balance
 // 	if user enters 4- EXIT
+
+import java.util.Scanner;
+
+class Atm {
 
     static void ATM(){
         System.out.println("Welcome to XYZ Bank ATM");
